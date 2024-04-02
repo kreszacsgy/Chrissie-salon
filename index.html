@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Chrissie szalon
+    </title>
+    <script src="https://kit.fontawesome.com/fe4df253c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <header id="header">
+        <a href="#home"><img class="logo" src="./assets/Chrissie Logo white.png" alt="Chrissie logo"></a>
+        <nav class="header-nav-list">
+            <input type="checkbox" name="nav-checkbox" id="nav-checkbox" class="nav-checkbox">
+            <label class="nav-label" for="nav-checkbox">
+                <div class="nav-checkbox-btn">
+                    <div class="nav-checkbox-line line-one"></div>
+                    <div class="nav-checkbox-line line-two"></div>
+                    <div class="nav-checkbox-line line-three"></div>
+                 </div>
+            </label>
+            <ul class="header-list">
+                <li class="header-list-item"><a href="#home">Kezdőlap</a></li>
+                <li class="header-list-item"><a href="#about">Rólam</a></li>
+                <li class="header-list-item"><a href="#projects">Szolgáltatások</a></li>
+                <li class="header-list-item"><a href="#contact">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="home">
+            <h1 class="home-name">Korsós Krisztina</h1>
+            <h2 class="home-profession">fodrász</h2>
+            <a href="#contact" class="home-button">Bejelentkezés</a>
+        </section>
+        <section id="about">
+            <h2 class="about-title">About me</h2>
+            <div class="about-container">
+                <img class="about-picture" src="./assets/chrissie.png" alt="Korsós Krisztina picture">
+                <section class="about-content">
+                    <section class="about-introduction">
+                        <h3 class="about-hello">Helló,</h3>
+                        <h2 class="about-name">Korsós Krisztina</h2>
+                        <h3 class="about-profession">vagyok, fodrász</h3>
+                        <p class="about-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit cupiditate reiciendis nostrum, eum sapiente perferendis illum magnam maiores optio nam? Sed earum tempore recusandae atque eos ea maxime ipsum! Recusandae sed amet consequatur, quidem soluta, eius minima assumenda aliquid veritatis alias laudantium, repellat omnis culpa consequuntur eaque dolorem. Earum.</p>
+                        <p class="about-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nesciunt? Adipisci velit debitis eius est odio saepe odit vel doloremque ipsa enim? Accusamus blanditiis eligendi molestiae amet quaerat eaque repellendus voluptatum ea iusto provident unde ratione, tenetur ab modi commodi temporibus est beatae eveniet sapiente aliquam recusandae inventore quod culpa.</p>
+                    </section>
+                    <img class="about-logo" src="./assets/Chrissie Logo white.png" alt="Chrissie logo">
+                    <div class="about-buttons">
+                        <a href="#contact" class="contact-button">Bejelentkezés</a>
+                        <a href="#" class="services-button">Szolgáltatásaim</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="services">
+            <h2 class="services-title">Szolgáltatások</h2>
+            <div class="services-container">
+                <section class="services-item">
+                    <a href="#" target="blank"><img class="services-picture" src="./assets/cut.jpg" alt="Haircut"></a>                  
+                    <h3 class="services-title">
+                        Vágás
+                    </h3>
+                    <p class="services-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                    </p>                                               
+                </section>
+                <section class="services-item">
+                    <a href="#" target="blank"><img class="services-picture" src="./assets/paint.jpg" alt="Hair coloring"></a>                  
+                    <h3 class="services-title">
+                        Festés
+                    </h3>
+                    <p class="services-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                    </p>                                               
+                </section>
+                <section class="services-item">
+                    <a href="#" target="blank"><img class="services-picture" src="./assets/wedding.jpg" alt="Hairstyle"></a>                  
+                    <h3 class="services-title">
+                        Alkalmi frizura
+                    </h3>
+                    <p class="services-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                    </p>                                               
+                </section>
+                <section class="services-item">
+                    <a href="#" target="blank"><img class="services-picture" src="./assets/style.jpg" alt="Hair drying"></a>                  
+                    <h3 class="services-title">
+                        Szárítás
+                    </h3>
+                    <p class="services-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                    </p>                                               
+                </section>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="contact-title">Kapcsolat</h2>
+            <p class="contact-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit beatae voluptatum quam vel dolores tempore molestiae reprehenderit ab placeat.</p>
+            <section class="contact-form-container">
+                <form class="contact-form" action="https://formspree.io/" method="POST">
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="name">Név</label>
+                        <input
+                            required
+                            class="contact-form-input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Név"
+                        />
+                    </section>
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="phone">Telefonszám</label>
+                        <input
+                            required
+                            class="contact-form-input"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="06-20-123-45-67"
+                            pattern="[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                        />
+                    </section>
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="email">E-mail</label>
+                        <input
+                            required
+                            class="contact-form-input"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="E-mail"
+                        />
+                    </section>
+                    <section class="contact-form-field">
+                        <label class="contact-form-label" for="message">Üzenet</label>
+                        <textarea
+                            cols="20"
+                            rows="10"
+                            class="contact-form-input"
+                            name="message"
+                            id="message"
+                            placeholder="Üzenet"
+                            required
+                        ></textarea>
+                    </section>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </form>
+            </section>
+        </section> 
+    </main>
+    <footer id="footer">
+        <ul class="footer-opening">Nyitvatartás
+            <li class="opening-item">H: 8:00-18:00</li>
+            <li class="opening-item">K: 8:00-18:00</li>
+            <li class="opening-item">Sz: 8:00-18:00</li>
+            <li class="opening-item">Cs: 8:00-18:00</li>
+            <li class="opening-item">P: 8:00-18:00</li>
+            <li class="opening-item">Sz,V: ZÁRVA</li>
+        </ul>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.820428222671!2d19.046440775490638!3d47.57128219041699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d9975188f305%3A0x66b6fa44ddce2b71!2sBudapest%2C%20Torma%20K%C3%A1roly%20u.%2010%2C%201031!5e0!3m2!1shu!2shu!4v1712080402558!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <ul class="footer-social">
+            <li class="footer-social-item">
+                <a href="https:/www.facebbok.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https:/www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>                
+            </li>
+            <li class="footer-social-item">
+                <a href="https:/www.tiktok.com" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>                
+            </li>
+        </ul>        
+        <p class="footer-copyright-item">Copyright &copy; 2024 Gyöngyi Kreszács</p>
+        <a href="#" class="top-btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </footer>    
+</body>
+</html>
