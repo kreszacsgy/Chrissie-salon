@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --dark-brown: #201613;
+    --button-green: #82E25F;
+    --main-font: 'Poppins', sans-serif;
+    --hero-font: 'Qwitcher Grypen', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--main-font);
+    scroll-behavior: smooth;
+}
+
