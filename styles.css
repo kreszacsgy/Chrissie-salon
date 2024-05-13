@@ -145,7 +145,7 @@ header a:hover {
     }
 
     .header-list-item a:hover {
-        color: var(--button-green)
+        color: var(--button-green);
     }
 
     #header {
