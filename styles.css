@@ -873,6 +873,10 @@ header a:hover {
 }
 
 #pricelist{
+    padding:10vh 2rem 2rem 2rem;  
+    background-image: url(./assets/ChrissieLogowhite.png ), linear-gradient(90deg,rgba(57,197,199,0.5),rgba(255, 255, 255, 0.9));
+    background-position:bottom right;
+    background-repeat: no-repeat;
     text-align:left;
     width:80vw;
     display:flex;
@@ -909,7 +913,7 @@ td,th{
 th{
     font-size: 1.2rem;
     border:0px solid;
-    background:var(--button-green);
+    border-bottom: 2px solid var(--black);
 }
 
 
