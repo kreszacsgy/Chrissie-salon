@@ -88,7 +88,7 @@ header a:hover {
     box-shadow: -20px 20px 40px rgba(0,0,0,0.5);
 }
 
-.nav-checkbox-btn{
+.nav-label{
     width:40px;
     height:40px;
     display:flex;
@@ -106,17 +106,17 @@ header a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-one {
+.nav-checkbox:checked + .nav-label > .line-one {
     margin-top:13px;
     transform: rotate(+45deg);
 } 
 
-.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-two {
+.nav-checkbox:checked + .nav-label > .line-two {
     transform: rotate(135deg);
     margin-top:-14px;
 }
 
-.nav-checkbox:checked + .nav-label > .nav-checkbox-btn > .line-three {
+.nav-checkbox:checked + .nav-label > .line-three {
     opacity:0;
 } 
 
@@ -134,7 +134,7 @@ header a:hover {
         height:10vh;
     } 
 
-    .nav-checkbox-btn {
+    .nav-label {
         display:none;
     }
     
@@ -147,6 +147,8 @@ header a:hover {
     .header-list-item a:hover {
         color: var(--button-green);
     }
+
+    
 
     #header {
         padding: 1rem 3rem;
@@ -656,6 +658,7 @@ header a:hover {
 
 .contact-form-input{
     color: var(--gray);
+    font-size: 1rem;
     padding: 10px;
     width: 100%;
     border: 1px solid var(--white);
@@ -665,6 +668,10 @@ header a:hover {
     letter-spacing: 1px;
     margin-bottom: 20px;
     font-family: var(--main-font);
+}
+
+.contact-form-input:focus{
+    outline: 3px solid var(--button-green);
 }
 
 .submit-btn{
@@ -681,6 +688,13 @@ header a:hover {
 }
     
 .submit-btn:hover {
+    background: var(--white);
+    border: 4px solid var(--button-green);
+    box-shadow: 1px 1px 5px 1px var(--black);
+    color: var(--button-green)
+}
+
+.submit-btn:focus {
     background: var(--white);
     border: 4px solid var(--button-green);
     box-shadow: 1px 1px 5px 1px var(--black);
@@ -858,6 +872,45 @@ header a:hover {
     animation-delay: -20s;
 }
 
+#pricelist{
+    text-align:left;
+    width:80vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+    padding:30px;
+    margin-top: 30px;
+}
+
+.pricelist-title{
+    position:relative;
+    text-transform: uppercase;
+    display:block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight:700;
+    padding: 30px;
+    letter-spacing:0.1rem;
+    color: var(--black);
+}
+
+.pricelist-table{
+    width:100%;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+td,th{
+    padding:10px 40px 10px 40px;
+}
+
+th{
+    font-size: 1.2rem;
+    border:0px solid;
+    background:var(--button-green);
+}
 
 
 @keyframes animate{
@@ -893,6 +946,13 @@ header a:hover {
 }
 
 @media screen and (min-width: 576px){
+    #pricelist{
+        width:70vw;
+    }
+    td,th{
+        padding:10px 50px 10px 50px;
+    }
+    
     
 }
 
@@ -922,12 +982,28 @@ header a:hover {
             transform: translateX(calc(300px*-5))
         }
     }
+
+    #pricelist{
+        width:60vw;
+    }
+   
+    td,th{
+        padding:10px 60px 10px 60px;
+    }
 }
 
 @media screen and (min-width: 992px) {
 
     .scroll-image{
         width:70vw; 
-    }  
+    } 
+    
+    #pricelist{
+        width:600px;
+    }
+   
+    td,th{
+        padding:10px 70px 10px 70px;
+    }
 }
 
