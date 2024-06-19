@@ -22,17 +22,16 @@
     <header id="header">
         <a href="#home"><img class="logo" src="./assets/ChrissieLogowhite.png" alt="Chrissie logo"></a>
         <nav class="header-nav-list">
-            <input type="checkbox" name="nav-checkbox" id="nav-checkbox" class="nav-checkbox">
-            <label class="nav-label" for="nav-checkbox">
-                <span class="nav-checkbox-line line-one"></span>
-                <span class="nav-checkbox-line line-two"></span>
-                <span class="nav-checkbox-line line-three"></span>
-            </label>
-            <ul class="header-list">
-                <li class="header-list-item"><a href="#home">Kezdőlap</a></li>
-                <li class="header-list-item"><a href="#about">Rólam</a></li>
-                <li class="header-list-item"><a href="#services">Szolgáltatások</a></li>
-                <li class="header-list-item"><a href="#contact">Kapcsolat</a></li>
+            <button class="hamburger-btn js-hamburger-btn">
+                <span class="hamburger-btn-line line-one"></span>
+                <span class="hamburger-btn-line line-two"></span>
+                <span class="hamburger-btn-line line-three"></span>
+            </button>
+            <ul class="nav-list js-nav-list">
+                <li class="nav-list-item js-nav-list-item"><a href="#home">Kezdőlap</a></li>
+                <li class="nav-list-item js-nav-list-item"><a href="#about">Rólam</a></li>
+                <li class="nav-list-item js-nav-list-item"><a href="#services">Szolgáltatások</a></li>
+                <li class="nav-list-item js-nav-list-item"><a href="#contact">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
@@ -214,7 +213,8 @@
             </li>
         </ul>        
         <p class="footer-copyright-item">Copyright &copy; 2024 Korsós Krisztina</p>
-        <a href="#" class="top-btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
-    </footer>    
+        <a href="#" class="top-btn js-top-btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </footer> 
+    <script src="./index.js"></script>   
 </body>
 </html>

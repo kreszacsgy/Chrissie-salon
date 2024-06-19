@@ -81,6 +81,8 @@
     bottom:2rem;
     right:0.5rem;
     margin-top:100vh;
+    opacity:0;
+    transition: opacity 0.5s;
 }
 
 .top-btn:hover {
@@ -91,6 +93,10 @@
     font-size:0.7rem;
     color: var(--white);
     text-align:center;
+}
+
+.top-btn.visible{
+    opacity:1;
 }
 
 @media screen and (min-width: 576px){
