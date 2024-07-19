@@ -4,6 +4,8 @@ const navList=document.querySelector(".js-nav-list");
 const navItems=document.querySelectorAll(".js-nav-list-item");
 const sections=document.querySelectorAll("main > section");
 const navLinks=document.querySelectorAll(".js-nav-list a");
+const slidesContainer = document.querySelector(".slide-container");
+const fetchUrl = 'https://kreszacsgy.github.io/Chrissie-salon/data/reviews.json';
 
 //scroll top button
 
@@ -64,6 +66,49 @@ function pageNavigation() {
     });
 };
 
+// fetch reviews
+
+async function fetchReviews() {
+    try {
+        const response = await fetch(fetchUrl);
+        const reviews = await response.json();
+        renderSlides(reviews);
+        startSlideShow(reviews);
+
+    } catch (err) {
+        console.error(err);
+    };
+};
+
+// create review cards
+
+function renderSlides(reviews) {
+    slidesContainer.innerHTML = reviews.map((review, index) => `
+        <div class="mySlides ${index === 0 ? 'active' : ''};">
+            <div class="text">
+                <i class="fa-solid fa-quote-right"></i>
+                <h3 class="customerName">${review.name}</h3>
+                <p>${review.text}</p>
+            </div>
+        </div>
+    `).join('');
+};
+
+// slideshow
+
+function startSlideShow(reviews) {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.mySlides');
+
+    slides[currentIndex].classList.add('active');
+    setInterval(() => {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % reviews.length;
+        slides[currentIndex].classList.add('active');
+    }, 4000);
+};
+
 scrollTopButtonVisibility();
 hamburgerMenu();
 pageNavigation();
+fetchReviews()
