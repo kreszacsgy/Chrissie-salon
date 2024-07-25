@@ -52,6 +52,7 @@
     background-image: url(../assets/ChrissieLogowhite.png ), linear-gradient(90deg,rgba(57,197,199,0.5),rgba(255, 255, 255, 0.9));
     background-position:bottom right;
     background-repeat: no-repeat;
+    background-size:100%;
     text-align:left;
     width:80vw;
     display:flex;

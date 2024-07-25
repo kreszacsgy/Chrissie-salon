@@ -89,12 +89,12 @@
     background: var(--white);
     border: 4px solid var(--button-green);
     box-shadow: 1px 1px 5px 1px var(--black);
-    color: var(--button-green)
+    color: var(--button-green);
 }
 
 .submit-btn:focus {
     background: var(--white);
     border: 4px solid var(--button-green);
     box-shadow: 1px 1px 5px 1px var(--black);
-    color: var(--button-green)
+    color: var(--button-green);
 }

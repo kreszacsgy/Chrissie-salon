@@ -80,19 +80,42 @@ async function fetchReviews() {
     };
 };
 
+function createStars(productRating) {
+    let rating = productRating; 
+    let starsHTML = '';
+    for (let i = 0; i < 5; i++) {
+        if (rating > 0) {
+            starsHTML += `<i class="fa-solid fa-star"></i>`
+            rating--
+        } else {
+            starsHTML += ` <i class="fa-regular fa-star"></i>`
+        }
+    };
+    return starsHTML;
+};
+
 // create review cards
 
-function renderSlides(reviews) {
-    slidesContainer.innerHTML = reviews.map((review, index) => `
-        <div class="mySlides ${index === 0 ? 'active' : ''};">
+function createReviewCards(review) {
+    const starsHTML= createStars(review.stars);
+    return `
+        <div class="mySlides">
             <div class="text">
-                <i class="fa-solid fa-quote-right"></i>
+                <div class="stars">${starsHTML}</div>
+                <i class="fa-solid fa-quote-right"></i>                
                 <h3 class="customerName">${review.name}</h3>
                 <p>${review.text}</p>
             </div>
         </div>
-    `).join('');
+    `;
 };
+
+
+// render review slides
+
+function renderSlides(reviews) {
+    slidesContainer.innerHTML = reviews.map((review => createReviewCards(review))).join('');};
+      
 
 // slideshow
 
