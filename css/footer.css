@@ -1,5 +1,10 @@
 #footer {
     background-color: var(--dark-brown);
+    background-image: url(../assets/ChrissieLogotransparent.png );
+    background-position:left;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100vw;
     padding:2rem 2rem 4rem 2rem; 
     display:flex;
     flex-wrap:wrap;
@@ -100,22 +105,26 @@
 }
 
 @media screen and (min-width: 576px){
+    #footer {
+        background-size: 40vw;
+    } 
+
     .google-map{
-        width:60vw;
+        width:40vw;
     }
 }
 
 @media screen and (min-width: 768px) {
+    #footer {
+        background-size: 40vw;
+    }
+
     .top-btn{
         right:2rem;
     }
 }
 
 @media screen and (min-width: 992px) {
-
-    .google-map{
-        width:40vw;
-    }
 
     .footer-copyright-item{
         width:80vw;

@@ -1,3 +1,4 @@
+const reviews=
 [
     {
         "userId": 1,
@@ -42,3 +43,5 @@
         "pictureUrl" : ""
     }
 ]
+
+export default reviews;

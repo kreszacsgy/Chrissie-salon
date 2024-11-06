@@ -1,3 +1,6 @@
+import servicesData from "./data/services.js"
+import reviews from "./data/reviews.js"
+
 const backToTopButton=document.querySelector(".js-top-btn");
 const hamburgerBtn=document.querySelector(".js-hamburger-btn");
 const navList=document.querySelector(".js-nav-list");
@@ -6,6 +9,11 @@ const sections=document.querySelectorAll("main > section");
 const navLinks=document.querySelectorAll(".js-nav-list a");
 const slidesContainer = document.querySelector(".slide-container");
 const fetchUrl = 'https://kreszacsgy.github.io/Chrissie-salon/data/reviews.json';
+const modalSlidesContainer= document.querySelector(".scroll-image-container");
+const modal=document.querySelector(".modal");
+const modalTitle=document.querySelector(".modal-title");
+
+
 
 //scroll top button
 
@@ -66,19 +74,6 @@ function pageNavigation() {
     });
 };
 
-// fetch reviews
-
-async function fetchReviews() {
-    try {
-        const response = await fetch(fetchUrl);
-        const reviews = await response.json();
-        renderSlides(reviews);
-        startSlideShow(reviews);
-
-    } catch (err) {
-        console.error(err);
-    };
-};
 
 function createStars(productRating) {
     let rating = productRating; 
@@ -117,12 +112,11 @@ function renderSlides(reviews) {
     slidesContainer.innerHTML = reviews.map((review => createReviewCards(review))).join('');};
       
 
-// slideshow
+// review slideshow
 
 function startSlideShow(reviews) {
     let currentIndex = 0;
     const slides = document.querySelectorAll('.mySlides');
-
     slides[currentIndex].classList.add('active');
     setInterval(() => {
         slides[currentIndex].classList.remove('active');
@@ -131,7 +125,11 @@ function startSlideShow(reviews) {
     }, 4000);
 };
 
+
+
 scrollTopButtonVisibility();
 hamburgerMenu();
 pageNavigation();
-fetchReviews()
+renderSlides(reviews);
+startSlideShow(reviews);
+

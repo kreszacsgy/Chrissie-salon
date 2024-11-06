@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/reviews.css" />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
 </head>
 <body>
     <header id="header">
@@ -68,58 +69,63 @@
         <section id="services">
             <h2 class="services-title">Szolgáltatások</h2>
             <div class="services-container">
-                <a href="./services.html#cutting" target="blank">
-                    <div class="services-item">
-                        <img class="services-picture" src="./assets/cut.jpg" alt="Haircut">                 
-                        <section class="services-item-content">
-                            <h3 class="services-item-title">
-                                Vágás
-                            </h3>
-                            <p class="services-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
-                            </p> 
-                        </section>                                              
-                    </div>
-                </a>
-                <a href="./services.html#coloring" target="blank">
-                    <div class="services-item">
-                        <img class="services-picture" src="./assets/paint.jpg" alt="Hair coloring">  
-                        <section class="services-item-content">               
-                            <h3 class="services-item-title">
-                                Festés
-                            </h3>
-                            <p class="services-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
-                            </p>
-                        </section>                                               
-                    </div>
-                </a>
-                <a href="./services.html#wedding" target="blank">
-                    <div class="services-item">
-                        <img class="services-picture" src="./assets/wedding.jpg" alt="Hairstyle"> 
-                        <section class="services-item-content">                 
-                            <h3 class="services-item-title">
-                                Alkalmi frizura
-                            </h3>
-                            <p class="services-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
-                            </p>                                               
-                        </section>
-                    </div>
-                </a>
-                <a href="./services.html#styling" target="blank">
-                    <div class="services-item">
-                        <img class="services-picture" src="./assets/style.jpg" alt="Hair drying">
-                        <section class="services-item-content">                
-                            <h3 class="services-item-title">
-                                Szárítás
-                            </h3>
-                            <p class="services-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
-                            </p>                                               
-                        </section>
-                    </div>
-                </a>
+                <div id="cutting" class="services-item">
+                    <img class="services-picture" src="./assets/cut.jpg" alt="Haircut">                 
+                    <section class="services-item-content">
+                        <h3 class="services-item-title">
+                            Vágás
+                        </h3>
+                        <p class="services-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                        </p> 
+                    </section>                                              
+                </div>
+                <div id="coloring" class="services-item">
+                    <img class="services-picture" src="./assets/paint.jpg" alt="Hair coloring">  
+                    <section class="services-item-content">               
+                        <h3 class="services-item-title">
+                            Festés
+                        </h3>
+                        <p class="services-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                        </p>
+                    </section>                                               
+                </div>
+                <div id="wedding" class= "services-item">
+                    <img class="services-picture" src="./assets/wedding.jpg" alt="Hairstyle"> 
+                    <section class="services-item-content">                 
+                        <h3 class="services-item-title">
+                            Alkalmi frizura
+                        </h3>
+                        <p class="services-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                        </p>                                               
+                    </section>
+                </div>
+                <div id="styling" class="services-item">
+                    <img class="services-picture" src="./assets/style.jpg" alt="Hair drying">
+                    <section class="services-item-content">                
+                        <h3 class="services-item-title">
+                            Szárítás
+                        </h3>
+                        <p class="services-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium aspernatur unde, officiis deleniti autem neque dolor! Cum quaerat quod velit!
+                        </p>                                               
+                    </section>
+                </div>
+            </div>
+            <div class="modal">
+                <span class="modal-close">&times;</span>
+                <section class="modal-section">                    
+                    <h2 class="modal-title"></h2>
+                    <div class="scroll-image">
+                        <div class="scroll-image-container">
+                        </div>                        
+                    </div>                    
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a> 
+                    <a href="#contact" class="modal-button">Bejelentkezés</a>
+                </section>
             </div>
         </section>
         <section id="reviews">
@@ -233,6 +239,6 @@
         <p class="footer-copyright-item">Copyright &copy; 2024 Korsós Krisztina</p>
         <a href="#" class="top-btn js-top-btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
     </footer> 
-    <script src="./index.js"></script>   
+    <script src="./index.js" type="module"></script>   
 </body>
 </html>
