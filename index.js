@@ -125,6 +125,50 @@ function startSlideShow(reviews) {
     }, 4000);
 };
 
+//create modal slides
+
+function createModalSlides(service){
+    return `
+        <div class="slide">
+            <img src="${service.pictureUrl}" alt="${service.text}">
+            <p class="caption">${service.text}</p>
+        </div>
+    `;
+};
+
+//render modal slides
+
+function renderModalSlides(services) {
+modalSlidesContainer.innerHTML = services.map((service=> createModalSlides(service))).join('');
+};
+
+// find the correct pictures from the object
+
+function getPicturesByType(obj,id) {
+return obj.find(item => item.type === id);      
+};
+
+// get the result from the object
+
+function getResult(id){
+const result=getPicturesByType(servicesData,id);
+renderModalSlides(result.pictures);
+modalTitle.innerText=result.title;        
+};
+
+// open modal
+
+function openModal() {
+const opens=document.querySelectorAll(".services-item");
+opens.forEach(open=>{open.addEventListener("click",(e) => {
+    modal.classList.add("modal-active");
+    const itemId=e.target.parentNode.id;
+    getResult(itemId);
+    clickSlides();
+})});        
+};
+
+
 
 
 scrollTopButtonVisibility();
@@ -132,4 +176,5 @@ hamburgerMenu();
 pageNavigation();
 renderSlides(reviews);
 startSlideShow(reviews);
+openModal();
 
