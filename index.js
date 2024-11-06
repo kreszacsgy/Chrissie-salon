@@ -177,6 +177,35 @@ function closeModal() {
         modal.classList.remove("modal-active"));
 };
 
+// handle arrow direction
+
+function handleClick(direction) {
+    const item = document.querySelector(".slide");
+    const itemWidth = item.offsetWidth;
+    if(direction === "previous") {
+        modalSlidesContainer.scrollBy({ left: -itemWidth, behavior: "smooth" });
+    } else {
+        modalSlidesContainer.scrollBy({ left: itemWidth, behavior: "smooth" });
+    }
+};
+
+// scroll in the modal with the arrows
+
+function clickSlides() {
+    const next=document.querySelector(".next");
+    const prev=document.querySelector(".prev");
+    next.addEventListener("click",()=>handleClick("next"));
+    prev.addEventListener("click",()=>handleClick("previous"));
+    
+};
+
+function clickModalButton() {
+    const modalButton = document.querySelector(".modal-button");
+    modalButton.addEventListener("click",()=> 
+        modal.classList.remove("modal-active"));
+}
+
+
 
 
 
@@ -187,4 +216,5 @@ renderSlides(reviews);
 startSlideShow(reviews);
 openModal();
 closeModal();
+clickModalButton();
 
