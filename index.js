@@ -168,6 +168,15 @@ opens.forEach(open=>{open.addEventListener("click",(e) => {
 })});        
 };
 
+// close modal
+  
+function closeModal() {
+    const close=document.querySelector(".modal-close");
+    const modal=document.querySelector(".modal");
+    close.addEventListener("click",()=> 
+        modal.classList.remove("modal-active"));
+};
+
 
 
 
@@ -177,4 +186,5 @@ pageNavigation();
 renderSlides(reviews);
 startSlideShow(reviews);
 openModal();
+closeModal();
 
