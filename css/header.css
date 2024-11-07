@@ -7,7 +7,7 @@
     position: fixed;
     width: 100vw;
     height: 10vh;
-    z-index: 10;
+    z-index: 100;
     padding: 1rem 2rem;
     font-weight: 700;
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
