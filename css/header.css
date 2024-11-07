@@ -43,13 +43,25 @@ header a.active {
     margin: 0 auto;
 }
 
+
+@keyframes rotate{
+    0%{transform: rotate(0deg); left:0px;}
+    50%{transform: rotate(360deg); left:100px;}
+    100%{transform: rotate(0deg); right:-100px;}
+}
+
 .logo {
     height: 14vh; 
     padding:0.5rem;
     position: relative;
     left:-1.5rem; 
     top:0.2rem;
+    animation-name:rotate;
+    animation-duration: 4s;
 }
+
+
+
 
 .nav-list.nav-active {
     right:0;
