@@ -13,6 +13,17 @@
     padding:2rem;    
 }
 
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
 .home-name {
     font-family: var(--hero-font); 
     font-size: 6rem;
@@ -20,6 +31,18 @@
     margin-bottom: 40px;
     text-align:center;
     font-weight: 700;
+    animation:1.5s fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 .home-profession { 
