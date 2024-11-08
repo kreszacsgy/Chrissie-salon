@@ -74,6 +74,8 @@ function pageNavigation() {
     });
 };
 
+// create stars
+
 
 function createStars(productRating) {
     let rating = productRating; 
