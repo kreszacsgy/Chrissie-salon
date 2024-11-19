@@ -1,7 +1,7 @@
 .modal{
     position: fixed;
     z-index: 101;
-    padding: 50px 0;
+    padding: 30px 0;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: row;
     justify-content:center;
-    padding:0px 50px;
+    padding:0px 30px;
 }
 
 .scroll-image.slider-active{
@@ -147,7 +147,17 @@
     transition: 0.5s ease-in-out;
 }
 
-.modal-button {
+.modal-button-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 20px;
+}
+
+
+.modal-button-contact {
     color: var(--black);
     font-size: 0.85rem;
     border: 4px solid var(--button-green);
@@ -161,22 +171,59 @@
     font-weight: 700;
 }
 
-.modal-button:hover {
+.modal-button-contact:hover {
     background: var(--white);
     border: 4px solid var(--button-green);
     box-shadow: 1px 1px 5px 1px var(--black);
     color: var(--button-green);
 }
 
-.modal-button:focus {
+.modal-button-contact:focus {
     background: var(--white);
     border: 4px solid var(--orange);
     box-shadow: 1px 1px 5px 1px var(--black);
     color: var(--orange)
 }
 
+.modal-button-pricelist {
+    color: var(--black);
+    font-size: 0.85rem;
+    border: 4px solid var(--button-green);
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+
+.modal-button-pricelist:hover {
+    background: var(--white);
+    border: 4px solid var(--button-green);
+    box-shadow: 1px 1px 5px 1px var(--black);
+    color: var(--button-green)
+}
+
+.modal-button-pricelist:focus {
+    background: var(--white);
+    border: 4px solid var(--button-green);
+    box-shadow: 1px 1px 5px 1px var(--black);
+    color: var(--button-green)
+}
+
+
 
 @media screen and (min-width: 576px){
+
+    .modal{
+        padding: 50px 0;
+    }
+
+    .scroll-image{
+        padding:0px 50px;
+    }
 
     .slide {        
         width:250px;  
@@ -187,7 +234,10 @@
         width:250px;
         height:350px;
     }
-        
+     
+    .modal-button-container{
+        flex-direction:row;
+    }
 
     .scroll-image-container{
         width:350px;
