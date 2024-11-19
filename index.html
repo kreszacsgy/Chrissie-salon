@@ -69,7 +69,7 @@
         <section id="services">
             <h2 class="services-title">Szolgáltatások</h2>
             <div class="services-container">
-                <div id="cutting" class="services-item">
+                <div id="cutting" class="services-item js-services-item">
                     <img class="services-picture" src="./assets/cut.jpg" alt="Haircut">                 
                     <section class="services-item-content">
                         <h3 class="services-item-title">
@@ -80,7 +80,7 @@
                         </p> 
                     </section>                                              
                 </div>
-                <div id="coloring" class="services-item">
+                <div id="coloring" class="services-item js-services-item">
                     <img class="services-picture" src="./assets/paint.jpg" alt="Hair coloring">  
                     <section class="services-item-content">               
                         <h3 class="services-item-title">
@@ -91,7 +91,7 @@
                         </p>
                     </section>                                               
                 </div>
-                <div id="wedding" class= "services-item">
+                <div id="wedding" class= "services-item js-services-item">
                     <img class="services-picture" src="./assets/wedding.jpg" alt="Hairstyle"> 
                     <section class="services-item-content">                 
                         <h3 class="services-item-title">
@@ -102,7 +102,7 @@
                         </p>                                               
                     </section>
                 </div>
-                <div id="styling" class="services-item">
+                <div id="styling" class="services-item js-services-item">
                     <img class="services-picture" src="./assets/style.jpg" alt="Hair drying">
                     <section class="services-item-content">                
                         <h3 class="services-item-title">
@@ -114,22 +114,23 @@
                     </section>
                 </div>
             </div>
-            <div class="modal">
-                <span class="modal-close">&times;</span>
+            <div class="modal js-modal">
+                <span class="modal-close js-modal-close">&times;</span>
                 <section class="modal-section">                    
-                    <h2 class="modal-title"></h2>
+                    <h2 class="modal-title js-modal-title"></h2>
                     <div class="scroll-image">
-                        <div class="scroll-image-container">
+                        <div class="scroll-image-container js-scroll-image-container">
                         </div>                        
                     </div>                    
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
+                    <a class="prev js-prev">&#10094;</a>
+                    <a class="next js-next">&#10095;</a>
                     <div class="modal-button-container">
-                        <a href="#contact" class="modal-button-contact">Bejelentkezés</a>
+                        <a href="#contact" class="modal-button-contact js-modal-button-contact">Bejelentkezés</a>
                         <a href="./prices.html#price" target="_blank" class="modal-button-pricelist">Árlista</a>
                     </div> 
                 </section>
             </div>
+            <div class="modal-overlay js-modal-overlay"></div>
         </section>
         <section id="reviews">
             <div class="reviews-container">
@@ -139,7 +140,7 @@
                     </div>
                 </div>
                 <div class="reviews-right">
-                    <div class="slide-container">
+                    <div class="slide-container js-slide-container">
                     </div>
                 </div>
             </div>

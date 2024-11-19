@@ -7,12 +7,16 @@ const navList=document.querySelector(".js-nav-list");
 const navItems=document.querySelectorAll(".js-nav-list-item");
 const sections=document.querySelectorAll("main > section");
 const navLinks=document.querySelectorAll(".js-nav-list a");
-const slidesContainer = document.querySelector(".slide-container");
-const fetchUrl = 'https://kreszacsgy.github.io/Chrissie-salon/data/reviews.json';
-const modalSlidesContainer= document.querySelector(".scroll-image-container");
-const modal=document.querySelector(".modal");
-const modalTitle=document.querySelector(".modal-title");
-
+const slidesContainer = document.querySelector(".js-slide-container");
+const modalSlidesContainer= document.querySelector(".js-scroll-image-container");
+const modal=document.querySelector(".js-modal");
+const modalOverlay=document.querySelector(".js-modal-overlay");
+const modalTitle=document.querySelector(".js-modal-title");
+const modalClose=document.querySelector(".js-modal-close");
+const next=document.querySelector(".js-next");
+const prev=document.querySelector(".js-prev");
+const modalButton = document.querySelector(".js-modal-button-contact");
+const servicesItems=document.querySelectorAll(".js-services-item");
 
 
 //scroll top button
@@ -75,7 +79,6 @@ function pageNavigation() {
 };
 
 // create stars
-
 
 function createStars(productRating) {
     let rating = productRating; 
@@ -141,42 +144,48 @@ function createModalSlides(service){
 //render modal slides
 
 function renderModalSlides(services) {
-modalSlidesContainer.innerHTML = services.map((service=> createModalSlides(service))).join('');
+    modalSlidesContainer.innerHTML = services.map((service=> createModalSlides(service))).join('');
 };
 
 // find the correct pictures from the object
 
 function getPicturesByType(obj,id) {
-return obj.find(item => item.type === id);      
+    return obj.find(item => item.type === id);      
 };
 
 // get the result from the object
 
 function getResult(id){
-const result=getPicturesByType(servicesData,id);
-renderModalSlides(result.pictures);
-modalTitle.innerText=result.title;        
+    const result=getPicturesByType(servicesData,id);
+    renderModalSlides(result.pictures);
+    modalTitle.innerText=result.title;        
 };
 
 // open modal
 
 function openModal() {
-const opens=document.querySelectorAll(".services-item");
-opens.forEach(open=>{open.addEventListener("click",(e) => {
-    modal.classList.add("modal-active");
-    const itemId=e.target.parentNode.id;
-    getResult(itemId);
-    clickSlides();
-})});        
+    servicesItems.forEach(servicesItem=>{servicesItem.addEventListener("click",(e) => {
+        modal.classList.add("modal-active");
+        modalOverlay.classList.add("modal-active");
+        const itemId=e.target.parentNode.id;
+        getResult(itemId);
+        clickSlides();
+    })});        
 };
 
 // close modal
   
 function closeModal() {
-    const close=document.querySelector(".modal-close");
-    const modal=document.querySelector(".modal");
-    close.addEventListener("click",()=> 
-        modal.classList.remove("modal-active"));
+    // close modal when close button is clicked
+    modalClose.addEventListener("click",()=> {
+        modal.classList.remove("modal-active");
+        modalOverlay.classList.remove("modal-active");
+    });
+    //close modal when overlay is clicked
+    modalOverlay.addEventListener("click",()=> {
+        modal.classList.remove("modal-active");
+        modalOverlay.classList.remove("modal-active");
+    });    
 };
 
 // handle arrow direction
@@ -188,27 +197,21 @@ function handleClick(direction) {
         modalSlidesContainer.scrollBy({ left: -itemWidth, behavior: "smooth" });
     } else {
         modalSlidesContainer.scrollBy({ left: itemWidth, behavior: "smooth" });
-    }
+    };
 };
 
 // scroll in the modal with the arrows
 
 function clickSlides() {
-    const next=document.querySelector(".next");
-    const prev=document.querySelector(".prev");
     next.addEventListener("click",()=>handleClick("next"));
-    prev.addEventListener("click",()=>handleClick("previous"));
-    
+    prev.addEventListener("click",()=>handleClick("previous"));    
 };
 
 function clickModalButton() {
-    const modalButton = document.querySelector(".modal-button-contact");
-    modalButton.addEventListener("click",()=> 
-        modal.classList.remove("modal-active"));
+    modalButton.addEventListener("click",()=> {
+        modal.classList.remove("modal-active");
+        modalOverlay.classList.remove("modal-active")});
 }
-
-
-
 
 
 scrollTopButtonVisibility();

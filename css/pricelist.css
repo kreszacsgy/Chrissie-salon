@@ -15,7 +15,7 @@
 
 #pricelist{
     padding:10vh 2rem 2rem 2rem;  
-    background-image: url(../assets/ChrissieLogowhite.png ), linear-gradient(90deg,rgba(57,197,199,1),rgba(244,221,95,0.8));
+    background-image: url(../assets/ChrissieLogotransparent.png ), linear-gradient(90deg,rgba(57,197,199,1),rgba(244,221,95,0.8));
     background-position:bottom right;
     background-repeat: no-repeat;
     background-size:100%;
@@ -49,7 +49,7 @@
 }
 
 td,th{
-    padding:10px 40px 10px 40px;
+    padding:10px 10px 10px 10px;
 }
 
 th{
@@ -94,7 +94,7 @@ th{
         width:70vw;
     }
     td,th{
-        padding:10px 50px 10px 50px;
+        padding:10px 40px 10px 40px;
     }
     
     
@@ -107,7 +107,7 @@ th{
     }
    
     td,th{
-        padding:10px 60px 10px 60px;
+        padding:10px 50px 10px 50px;
     }
 }
 
