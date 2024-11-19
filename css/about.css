@@ -79,6 +79,7 @@
     letter-spacing: 0.1rem;
     border-radius: 10px;
     transition-duration: 0.4s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
 }
 
 .contact-button:hover {
@@ -106,6 +107,7 @@
     letter-spacing: 0.1rem;
     border-radius: 10px;
     transition-duration: 0.4s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
 }
 
 .services-button:hover {

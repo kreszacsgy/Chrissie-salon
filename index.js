@@ -202,7 +202,7 @@ function clickSlides() {
 };
 
 function clickModalButton() {
-    const modalButton = document.querySelector(".modal-button");
+    const modalButton = document.querySelector(".modal-button-contact");
     modalButton.addEventListener("click",()=> 
         modal.classList.remove("modal-active"));
 }
