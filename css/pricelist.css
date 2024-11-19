@@ -1,55 +1,21 @@
-#services-page{
+#price{
     width:100%;
     padding:4rem 2rem 4rem 2rem; 
-    background-image: linear-gradient(90deg,rgba(244,221,95,1),rgba(57,197,199,1));
+    background-image: linear-gradient(90deg,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url(../assets/salon2jpg.jpg ); /*linear-gradient(90deg,rgba(244,221,95,1),rgba(57,197,199,1));*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display:flex;
     flex-direction: column;
-    align-items: center;
-    overflow:hidden;
-}
-
-.services-page-title{
-    position:relative;
-    text-transform: uppercase;
-    display:block;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight:700;
-    padding: 30px;
-    letter-spacing:0.1rem;
-    color: var(--black);
-}
-
-.services-section {
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     align-items:center;
     overflow:hidden;
-    padding-top:10vh;
 }
 
-.scroll-image{
-    mask-image: linear-gradient(90deg, transparent, #ffffff 20%, #ffffff 80%, transparent);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width:90vw;
-}
-
-.scroll-image-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: calc(200px*10);
-    animation: animate 20s linear infinite;
-    animation-delay: -20s;
-}
 
 #pricelist{
     padding:10vh 2rem 2rem 2rem;  
-    background-image: url(../assets/ChrissieLogowhite.png ), linear-gradient(90deg,rgba(57,197,199,1),rgba(255, 255, 255, 1));
+    background-image: url(../assets/ChrissieLogowhite.png ), linear-gradient(90deg,rgba(57,197,199,1),rgba(244,221,95,0.8));
     background-position:bottom right;
     background-repeat: no-repeat;
     background-size:100%;
@@ -57,7 +23,7 @@
     width:80vw;
     display:flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     overflow:hidden;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
     padding:30px;
@@ -93,38 +59,6 @@ th{
 }
 
 
-@keyframes animate{
-    0%{
-        transform: translateX(0%)
-    }
-    100%{
-        transform: translateX(calc(200px*-5))
-    }
-}
-
-.slide {
-    width:200px;
-    padding:20px;
-    transition: 0.4s;  
-}
-
-.slide img{
-    width:160px;
-    height:250px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-    object-fit: cover;
-}
-
-.scroll-image-container:hover {
-    animation-play-state: paused;
-}
-
-.scroll-image-container img:hover {
-    cursor:pointer;
-    transform:scale(1.3);
-    transition: 0.5s ease-in-out;
-}
-
 @media screen and (min-width: 576px){
     #pricelist{
         width:70vw;
@@ -137,31 +71,6 @@ th{
 }
 
 @media screen and (min-width: 768px) {
-    .scroll-image{
-        width:80vw; 
-    }
-    
-    .slide {
-        width:300px; 
-    }
-
-    .slide img{
-        width:260px;
-        height:400px;
-    }
-
-    .scroll-image-container{
-        width: calc(300px*10);
-    }
-
-    @keyframes animate{
-        0%{
-            transform: translateX(0%)
-        }
-        100%{
-            transform: translateX(calc(300px*-5))
-        }
-    }
 
     #pricelist{
         width:60vw;
@@ -174,9 +83,6 @@ th{
 
 @media screen and (min-width: 992px) {
 
-    .scroll-image{
-        width:70vw; 
-    } 
     
     #pricelist{
         width:600px;
